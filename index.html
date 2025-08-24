@@ -288,12 +288,74 @@
             color: #dc3545 !important;
         }
 
+        /* Miglioramenti generali per mobile */
+        .grams-input {
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 6px;
+            transition: border-color 0.2s;
+        }
+
+        .grams-input:focus {
+            outline: none;
+            border-color: #4facfe;
+            box-shadow: 0 0 0 2px rgba(79, 172, 254, 0.2);
+        }
+
+        .food-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: #ddd;
+            outline: none;
+        }
+
+        .food-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4facfe;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .food-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4facfe;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .select-checkbox {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+        }
+
+        /* Tablet e dispositivi medi */
         @media (max-width: 768px) {
-            .meals-container {
-                grid-template-columns: 1fr;
+            body {
                 padding: 15px;
             }
+
+            .meals-container {
+                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                padding: 20px;
+                gap: 20px;
+            }
             
+            .meal-section {
+                padding: 20px;
+            }
+
             .slider-container {
                 flex-direction: column;
                 align-items: stretch;
@@ -301,7 +363,133 @@
             }
             
             .food-amounts {
-                justify-content: space-around;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .grams-input {
+                width: 70px !important;
+                font-size: 16px !important; /* Previene zoom su iOS */
+            }
+        }
+
+        /* Smartphone */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .navigation-menu {
+                margin: 15px !important;
+                padding: 15px !important;
+            }
+
+            .navigation-menu select {
+                width: 100%;
+                padding: 12px !important;
+                font-size: 16px !important;
+            }
+
+            .navigation-menu > div {
+                flex-direction: column !important;
+                gap: 10px !important;
+            }
+
+            .instructions {
+                margin: 15px;
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+
+            .meals-container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .meal-section {
+                padding: 15px;
+            }
+
+            .meal-section h2 {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            .category-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .category-status {
+                align-self: stretch;
+            }
+
+            .food-item {
+                padding: 15px;
+            }
+
+            .food-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .food-controls {
+                margin-top: 15px;
+            }
+
+            .slider-container {
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 10px;
+            }
+
+            .food-slider {
+                flex: 1;
+                min-height: 44px; /* Touch target */
+            }
+
+            .food-amounts {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .grams-input {
+                width: 100px !important;
+                padding: 12px 8px !important;
+                font-size: 16px !important;
+                min-height: 44px; /* Touch target */
+            }
+
+            .select-checkbox {
+                transform: scale(1.2); /* Checkbox più grande */
+            }
+
+            .reset-category {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+                min-height: 44px;
             }
         }
     </style>
