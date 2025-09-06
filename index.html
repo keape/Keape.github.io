@@ -586,11 +586,31 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="breakfast-dairy" data-base="50">
+                        <div class="food-item" data-category="breakfast-dairy" data-base="150">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Yogurt da latte parz scremato</div>
-                                <div class="food-base">Equivalenza: 50g = 100%</div>
+                                <div class="food-base">Equivalenza: 150g = 100%</div>
+                            </div>
+                            <div class="food-controls">
+                                <div class="slider-container">
+                                    <div class="percentage-label">%</div>
+                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
+                                    <div class="percentage-display">0%</div>
+                                </div>
+                                <div class="food-amounts">
+                                    <div class="current-amount">0g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <span style="margin-left: 5px;">g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="food-item" data-category="breakfast-dairy" data-base="40">
+                            <div class="food-item-header">
+                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
+                                <div class="food-name">Prosciutto cotto magro</div>
+                                <div class="food-base">Equivalenza: 40g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -609,28 +629,8 @@
                         <div class="food-item" data-category="breakfast-dairy" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Prosciutto cotto magro</div>
-                                <div class="food-base">Equivalenza: 50g = 100%</div>
-                            </div>
-                            <div class="food-controls">
-                                <div class="slider-container">
-                                    <div class="percentage-label">%</div>
-                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
-                                    <div class="percentage-display">0%</div>
-                                </div>
-                                <div class="food-amounts">
-                                    <div class="current-amount">0g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                    <span style="margin-left: 5px;">g</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="food-item" data-category="breakfast-dairy" data-base="30">
-                            <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Ricotta di vacca</div>
-                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                                <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -653,20 +653,20 @@
                         <div class="category-image">🍪</div>
                         <div class="category-info">
                             <div class="category-title">Carboidrati</div>
-                            <div class="category-base">Equivalenza calorica base: Fette biscottate 32g</div>
+                            <div class="category-base">Equivalenza calorica base: Fette biscottate integrali 40g</div>
                         </div>
                         <div class="category-status">
-                            <div class="category-total" id="breakfast-carbs-grams">32g totali</div>
+                            <div class="category-total" id="breakfast-carbs-grams">40g totali</div>
                             <div class="percentage-used" id="breakfast-carbs-percent">100% usato</div>
                         </div>
                         <button class="reset-category" onclick="resetCategory('breakfast-carbs')">Reset</button>
                     </div>
                     <div class="food-options">
-                        <div class="food-item active" data-category="breakfast-carbs" data-base="32">
+                        <div class="food-item active" data-category="breakfast-carbs" data-base="40">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" checked onchange="toggleFood(this)">
                                 <div class="food-name">Fette biscottate integrali</div>
-                                <div class="food-base">Equivalenza: 32g = 100%</div>
+                                <div class="food-base">Equivalenza: 40g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -675,18 +675,58 @@
                                     <div class="percentage-display">100%</div>
                                 </div>
                                 <div class="food-amounts">
-                                    <div class="current-amount">32g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="32" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <div class="current-amount">40g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="40" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
                                     <span style="margin-left: 5px;">g</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="breakfast-carbs" data-base="20">
+                        <div class="food-item" data-category="breakfast-carbs" data-base="30">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Fette biscottate</div>
-                                <div class="food-base">Equivalenza: 20g = 100%</div>
+                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                            </div>
+                            <div class="food-controls">
+                                <div class="slider-container">
+                                    <div class="percentage-label">%</div>
+                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
+                                    <div class="percentage-display">0%</div>
+                                </div>
+                                <div class="food-amounts">
+                                    <div class="current-amount">0g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <span style="margin-left: 5px;">g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="food-item" data-category="breakfast-carbs" data-base="30">
+                            <div class="food-item-header">
+                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
+                                <div class="food-name">Biscotti secchi</div>
+                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                            </div>
+                            <div class="food-controls">
+                                <div class="slider-container">
+                                    <div class="percentage-label">%</div>
+                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
+                                    <div class="percentage-display">0%</div>
+                                </div>
+                                <div class="food-amounts">
+                                    <div class="current-amount">0g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <span style="margin-left: 5px;">g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="food-item" data-category="breakfast-carbs" data-base="50">
+                            <div class="food-item-header">
+                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
+                                <div class="food-name">Pane integrale</div>
+                                <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -705,7 +745,7 @@
                         <div class="food-item" data-category="breakfast-carbs" data-base="40">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Biscotti secchi</div>
+                                <div class="food-name">Pane di tipo 1 (pezzatura > 500gr)</div>
                                 <div class="food-base">Equivalenza: 40g = 100%</div>
                             </div>
                             <div class="food-controls">
@@ -722,51 +762,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="breakfast-carbs" data-base="30">
-                            <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Pane integrale</div>
-                                <div class="food-base">Equivalenza: 30g = 100%</div>
-                            </div>
-                            <div class="food-controls">
-                                <div class="slider-container">
-                                    <div class="percentage-label">%</div>
-                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
-                                    <div class="percentage-display">0%</div>
-                                </div>
-                                <div class="food-amounts">
-                                    <div class="current-amount">0g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                    <span style="margin-left: 5px;">g</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="food-item" data-category="breakfast-carbs" data-base="35">
-                            <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Pane di tipo 1 (pezzatura > 500gr)</div>
-                                <div class="food-base">Equivalenza: 35g = 100%</div>
-                            </div>
-                            <div class="food-controls">
-                                <div class="slider-container">
-                                    <div class="percentage-label">%</div>
-                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
-                                    <div class="percentage-display">0%</div>
-                                </div>
-                                <div class="food-amounts">
-                                    <div class="current-amount">0g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                    <span style="margin-left: 5px;">g</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="food-item" data-category="breakfast-carbs" data-base="30">
+                        <div class="food-item" data-category="breakfast-carbs" data-base="45">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Fiocchi d'avena</div>
-                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                                <div class="food-base">Equivalenza: 45g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -789,11 +789,68 @@
             <div class="meal-section snack" id="snack1">
                 <h2><div class="meal-icon">🍎</div>Spuntino Mattutino</h2>
                 
+                <!-- Categoria Yogurt -->
+                <div class="food-category">
+                    <div class="category-header">
+                        <div class="category-image">🥛</div>
+                        <div class="category-info">
+                            <div class="category-title">Yogurt</div>
+                            <div class="category-base">Equivalenza calorica base: Yogurt da latte parz scremato 150g</div>
+                        </div>
+                        <div class="category-status">
+                            <div class="category-total" id="morning-snack-yogurt-grams">150g totali</div>
+                            <div class="percentage-used" id="morning-snack-yogurt-percent">100% usato</div>
+                        </div>
+                        <button class="reset-category" onclick="resetCategory('morning-snack-yogurt')">Reset</button>
+                    </div>
+                    <div class="food-options">
+                        <div class="food-item active" data-category="morning-snack-yogurt" data-base="150">
+                            <div class="food-item-header">
+                                <input type="checkbox" class="select-checkbox" checked onchange="toggleFood(this)">
+                                <div class="food-name">Yogurt da latte parz scremato</div>
+                                <div class="food-base">Equivalenza: 150g = 100%</div>
+                            </div>
+                            <div class="food-controls">
+                                <div class="slider-container">
+                                    <div class="percentage-label">%</div>
+                                    <input type="range" class="food-slider" min="0" max="100" value="100" onchange="updateFood(this)">
+                                    <div class="percentage-display">100%</div>
+                                </div>
+                                <div class="food-amounts">
+                                    <div class="current-amount">150g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="150" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <span style="margin-left: 5px;">g</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="food-item" data-category="morning-snack-yogurt" data-base="150">
+                            <div class="food-item-header">
+                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
+                                <div class="food-name">Yogurt greco magro 0%</div>
+                                <div class="food-base">Equivalenza: 150g = 100%</div>
+                            </div>
+                            <div class="food-controls">
+                                <div class="slider-container">
+                                    <div class="percentage-label">%</div>
+                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
+                                    <div class="percentage-display">0%</div>
+                                </div>
+                                <div class="food-amounts">
+                                    <div class="current-amount">0g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <span style="margin-left: 5px;">g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoria Frutta -->
                 <div class="food-category">
                     <div class="category-header">
                         <div class="category-image">🍯</div>
                         <div class="category-info">
-                            <div class="category-title">Frutta e Snack</div>
+                            <div class="category-title">Frutta</div>
                             <div class="category-base">Equivalenza calorica base: Mele 150g</div>
                         </div>
                         <div class="category-status">
@@ -1028,46 +1085,6 @@
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Mirtilli</div>
                                 <div class="food-base">Equivalenza: 300g = 100%</div>
-                            </div>
-                            <div class="food-controls">
-                                <div class="slider-container">
-                                    <div class="percentage-label">%</div>
-                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
-                                    <div class="percentage-display">0%</div>
-                                </div>
-                                <div class="food-amounts">
-                                    <div class="current-amount">0g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                    <span style="margin-left: 5px;">g</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="food-item" data-category="morning-snack" data-base="150">
-                            <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Yogurt da latte parz scremato</div>
-                                <div class="food-base">Equivalenza: 150g = 100%</div>
-                            </div>
-                            <div class="food-controls">
-                                <div class="slider-container">
-                                    <div class="percentage-label">%</div>
-                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
-                                    <div class="percentage-display">0%</div>
-                                </div>
-                                <div class="food-amounts">
-                                    <div class="current-amount">0g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                    <span style="margin-left: 5px;">g</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="food-item" data-category="morning-snack" data-base="150">
-                            <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Yogurt greco magro 0%</div>
-                                <div class="food-base">Equivalenza: 150g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1349,20 +1366,20 @@
                         <div class="category-image">🐟</div>
                         <div class="category-info">
                             <div class="category-title">Proteine</div>
-                            <div class="category-base">Equivalenza calorica base: Merluzzo o nasello fresco 130g</div>
+                            <div class="category-base">Equivalenza calorica base: Merluzzo o nasello fresco 140g</div>
                         </div>
                         <div class="category-status">
-                            <div class="category-total" id="lunch-proteins-grams">130g totali</div>
+                            <div class="category-total" id="lunch-proteins-grams">140g totali</div>
                             <div class="percentage-used" id="lunch-proteins-percent">100% usato</div>
                         </div>
                         <button class="reset-category" onclick="resetCategory('lunch-proteins')">Reset</button>
                     </div>
                     <div class="food-options">
-                        <div class="food-item active" data-category="lunch-proteins" data-base="130">
+                        <div class="food-item active" data-category="lunch-proteins" data-base="140">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" checked onchange="toggleFood(this)">
                                 <div class="food-name">Merluzzo o nasello fresco</div>
-                                <div class="food-base">Equivalenza: 130g = 100%</div>
+                                <div class="food-base">Equivalenza: 140g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1371,16 +1388,16 @@
                                     <div class="percentage-display">100%</div>
                                 </div>
                                 <div class="food-amounts">
-                                    <div class="current-amount">130g</div>
+                                    <div class="current-amount">140g</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="90">
+                        <div class="food-item" data-category="lunch-proteins" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Dentice fresco</div>
-                                <div class="food-base">Equivalenza: 90g = 100%</div>
+                                <div class="food-base">Equivalenza: 100g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1396,11 +1413,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="110">
+                        <div class="food-item" data-category="lunch-proteins" data-base="120">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Sogliola</div>
-                                <div class="food-base">Equivalenza: 110g = 100%</div>
+                                <div class="food-base">Equivalenza: 120g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1456,30 +1473,10 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="90">
-                            <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Pollo - petto</div>
-                                <div class="food-base">Equivalenza: 90g = 100%</div>
-                            </div>
-                            <div class="food-controls">
-                                <div class="slider-container">
-                                    <div class="percentage-label">%</div>
-                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
-                                    <div class="percentage-display">0%</div>
-                                </div>
-                                <div class="food-amounts">
-                                    <div class="current-amount">0g</div>
-                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
-                                    <span style="margin-left: 5px;">g</span>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="food-item" data-category="lunch-proteins" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
-                                <div class="food-name">Vitello - magro</div>
+                                <div class="food-name">Pollo - petto</div>
                                 <div class="food-base">Equivalenza: 100g = 100%</div>
                             </div>
                             <div class="food-controls">
@@ -1496,11 +1493,31 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="80">
+                        <div class="food-item" data-category="lunch-proteins" data-base="110">
+                            <div class="food-item-header">
+                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
+                                <div class="food-name">Vitello - magro</div>
+                                <div class="food-base">Equivalenza: 110g = 100%</div>
+                            </div>
+                            <div class="food-controls">
+                                <div class="slider-container">
+                                    <div class="percentage-label">%</div>
+                                    <input type="range" class="food-slider" min="0" max="100" value="0" onchange="updateFood(this)">
+                                    <div class="percentage-display">0%</div>
+                                </div>
+                                <div class="food-amounts">
+                                    <div class="current-amount">0g</div>
+                                    <input type="number" class="grams-input" min="0" max="1000" value="0" onchange="updateFromGrams(this)" style="width: 80px; padding: 5px; margin-left: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <span style="margin-left: 5px;">g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="food-item" data-category="lunch-proteins" data-base="90">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Bovino adulto o vitellone - carne magra</div>
-                                <div class="food-base">Equivalenza: 80g = 100%</div>
+                                <div class="food-base">Equivalenza: 90g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1536,11 +1553,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="85">
+                        <div class="food-item" data-category="lunch-proteins" data-base="95">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Tacchino - fesa</div>
-                                <div class="food-base">Equivalenza: 85g = 100%</div>
+                                <div class="food-base">Equivalenza: 95g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1556,11 +1573,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="90">
+                        <div class="food-item" data-category="lunch-proteins" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Coniglio - carne magra</div>
-                                <div class="food-base">Equivalenza: 90g = 100%</div>
+                                <div class="food-base">Equivalenza: 100g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1636,11 +1653,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="70">
+                        <div class="food-item" data-category="lunch-proteins" data-base="80">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Prosciutto cotto magro</div>
-                                <div class="food-base">Equivalenza: 70g = 100%</div>
+                                <div class="food-base">Equivalenza: 80g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1656,11 +1673,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="140">
+                        <div class="food-item" data-category="lunch-proteins" data-base="150">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Calamari freschi</div>
-                                <div class="food-base">Equivalenza: 140g = 100%</div>
+                                <div class="food-base">Equivalenza: 150g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -1676,11 +1693,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="lunch-proteins" data-base="50">
+                        <div class="food-item" data-category="lunch-proteins" data-base="60">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Sgombro o maccarello fresco</div>
-                                <div class="food-base">Equivalenza: 50g = 100%</div>
+                                <div class="food-base">Equivalenza: 60g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -2029,7 +2046,7 @@
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" checked disabled style="opacity: 0.6;">
                                 <div class="food-name" style="color: #155724; font-weight: bold;">Olio extra vergine di oliva</div>
-                                <div class="food-base" style="color: #155724;">Quantità fissa: 20g</div>
+                                <div class="food-base" style="color: #155724;">Quantità fissa: 25g</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -2038,7 +2055,7 @@
                                     <div class="percentage-display" style="color: #155724; font-weight: bold;">100%</div>
                                 </div>
                                 <div class="food-amounts">
-                                    <div class="current-amount" style="color: #155724; font-weight: bold;">20g</div>
+                                    <div class="current-amount" style="color: #155724; font-weight: bold;">25g</div>
                                 </div>
                             </div>
                         </div>
@@ -2306,21 +2323,22 @@
             <div class="meal-section snack" id="snack2">
                 <h2><div class="meal-icon">🥪</div>Merenda</h2>
                 
+                <!-- Categoria Yogurt -->
                 <div class="food-category">
                     <div class="category-header">
-                        <div class="category-image">🍓</div>
+                        <div class="category-image">🥛</div>
                         <div class="category-info">
-                            <div class="category-title">Spuntini Vari</div>
+                            <div class="category-title">Yogurt</div>
                             <div class="category-base">Equivalenza calorica base: Yogurt da latte parz scremato 150g</div>
                         </div>
                         <div class="category-status">
-                            <div class="category-total" id="snack-mixed-grams">150g totali</div>
-                            <div class="percentage-used" id="snack-mixed-percent">100% usato</div>
+                            <div class="category-total" id="afternoon-snack-yogurt-grams">150g totali</div>
+                            <div class="percentage-used" id="afternoon-snack-yogurt-percent">100% usato</div>
                         </div>
-                        <button class="reset-category" onclick="resetCategory('snack-mixed')">Reset</button>
+                        <button class="reset-category" onclick="resetCategory('afternoon-snack-yogurt')">Reset</button>
                     </div>
                     <div class="food-options">
-                        <div class="food-item active" data-category="snack-mixed" data-base="150">
+                        <div class="food-item active" data-category="afternoon-snack-yogurt" data-base="150">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" checked onchange="toggleFood(this)">
                                 <div class="food-name">Yogurt da latte parz scremato</div>
@@ -2339,12 +2357,11 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="food-item" data-category="snack-mixed" data-base="150">
+                        <div class="food-item" data-category="afternoon-snack-yogurt" data-base="140">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Yogurt greco magro 0%</div>
-                                <div class="food-base">Equivalenza: 150g = 100%</div>
+                                <div class="food-base">Equivalenza: 140g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -2359,10 +2376,27 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                <!-- Categoria Frutta e Frutta Secca -->
+                <div class="food-category">
+                    <div class="category-header">
+                        <div class="category-image">🍓</div>
+                        <div class="category-info">
+                            <div class="category-title">Frutta e Frutta Secca</div>
+                            <div class="category-base">Equivalenza calorica base: Mele 50g</div>
+                        </div>
+                        <div class="category-status">
+                            <div class="category-total" id="afternoon-snack-fruit-grams">50g totali</div>
+                            <div class="percentage-used" id="afternoon-snack-fruit-percent">100% usato</div>
+                        </div>
+                        <button class="reset-category" onclick="resetCategory('afternoon-snack-fruit')">Reset</button>
+                    </div>
+                    <div class="food-options">
+                        <div class="food-item active" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
-                                <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
+                                <input type="checkbox" class="select-checkbox" checked onchange="toggleFood(this)">
                                 <div class="food-name">Mele</div>
                                 <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
@@ -2380,7 +2414,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Arance</div>
@@ -2400,7 +2434,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Clementine</div>
@@ -2420,7 +2454,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="100">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Albicocche</div>
@@ -2440,7 +2474,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Kiwi</div>
@@ -2460,7 +2494,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Ciliege</div>
@@ -2480,7 +2514,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="100">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Fragole</div>
@@ -2500,7 +2534,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Pere</div>
@@ -2520,7 +2554,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="100">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Pesche senza buccia</div>
@@ -2540,7 +2574,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Prugne</div>
@@ -2560,7 +2594,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="50">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Ananas - fette</div>
@@ -2580,7 +2614,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="100">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="100">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Mirtilli</div>
@@ -2600,7 +2634,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="15">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="15">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Mandorle dolci secche</div>
@@ -2620,7 +2654,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="15">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="15">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Nocciole secche</div>
@@ -2640,7 +2674,7 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="snack-mixed" data-base="15">
+                        <div class="food-item" data-category="afternoon-snack-fruit" data-base="15">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Noci secche</div>
@@ -2906,20 +2940,20 @@
                         <div class="category-image">🥔</div>
                         <div class="category-info">
                             <div class="category-title">Carboidrati Alternativi</div>
-                            <div class="category-base">Equivalenza calorica base: Pane integrale 50g</div>
+                            <div class="category-base">Equivalenza calorica base: Pane integrale 60g</div>
                         </div>
                         <div class="category-status">
-                            <div class="category-total" id="dinner-alt-carbs-grams">50g totali</div>
+                            <div class="category-total" id="dinner-alt-carbs-grams">60g totali</div>
                             <div class="percentage-used" id="dinner-alt-carbs-percent">100% usato</div>
                         </div>
                         <button class="reset-category" onclick="resetCategory('dinner-alt-carbs')">Reset</button>
                     </div>
                     <div class="food-options">
-                        <div class="food-item active" data-category="dinner-alt-carbs" data-base="50">
+                        <div class="food-item active" data-category="dinner-alt-carbs" data-base="60">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" checked onchange="toggleFood(this)">
                                 <div class="food-name">Pane integrale</div>
-                                <div class="food-base">Equivalenza: 50g = 100%</div>
+                                <div class="food-base">Equivalenza: 60g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -2928,7 +2962,7 @@
                                     <div class="percentage-display">100%</div>
                                 </div>
                                 <div class="food-amounts">
-                                    <div class="current-amount">50g</div>
+                                    <div class="current-amount">60g</div>
                                 </div>
                             </div>
                         </div>
@@ -2953,11 +2987,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="30">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Pasta di semola</div>
-                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                                <div class="food-base">Equivalenza: 40g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -2973,11 +3007,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Pasta integrale</div>
-                                <div class="food-base">Equivalenza: 40g = 100%</div>
+                                <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -2993,11 +3027,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="30">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Riso integrale (sbramato)</div>
-                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                                <div class="food-base">Equivalenza: 40g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3013,11 +3047,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="30">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Riso Basmati</div>
-                                <div class="food-base">Equivalenza: 30g = 100%</div>
+                                <div class="food-base">Equivalenza: 40g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3033,11 +3067,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Farro o Spelta</div>
-                                <div class="food-base">Equivalenza: 40g = 100%</div>
+                                <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3053,11 +3087,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Orzo perlato</div>
-                                <div class="food-base">Equivalenza: 40g = 100%</div>
+                                <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3073,11 +3107,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="40">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="50">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Grano saraceno</div>
-                                <div class="food-base">Equivalenza: 40g = 100%</div>
+                                <div class="food-base">Equivalenza: 50g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3093,11 +3127,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-alt-carbs" data-base="150">
+                        <div class="food-item" data-category="dinner-alt-carbs" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Patate</div>
-                                <div class="food-base">Equivalenza: 150g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3521,11 +3555,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="150">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Bieta</div>
-                                <div class="food-base">Equivalenza: 150g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3541,11 +3575,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Carciofi</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3621,11 +3655,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Melanzane</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3641,11 +3675,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Peperoni</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3661,11 +3695,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Fagiolini</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3701,11 +3735,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Spinaci</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3761,11 +3795,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Broccoletti di rapa</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3781,11 +3815,11 @@
                             </div>
                         </div>
 
-                        <div class="food-item" data-category="dinner-vegetables" data-base="100">
+                        <div class="food-item" data-category="dinner-vegetables" data-base="200">
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" onchange="toggleFood(this)">
                                 <div class="food-name">Cavolfiore</div>
-                                <div class="food-base">Equivalenza: 100g = 100%</div>
+                                <div class="food-base">Equivalenza: 200g = 100%</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3820,7 +3854,7 @@
                             <div class="food-item-header">
                                 <input type="checkbox" class="select-checkbox" checked disabled style="opacity: 0.6;">
                                 <div class="food-name" style="color: #155724; font-weight: bold;">Olio extra vergine di oliva</div>
-                                <div class="food-base" style="color: #155724;">Quantità fissa: 20g</div>
+                                <div class="food-base" style="color: #155724;">Quantità fissa: 25g</div>
                             </div>
                             <div class="food-controls">
                                 <div class="slider-container">
@@ -3829,7 +3863,7 @@
                                     <div class="percentage-display" style="color: #155724; font-weight: bold;">100%</div>
                                 </div>
                                 <div class="food-amounts">
-                                    <div class="current-amount" style="color: #155724; font-weight: bold;">20g</div>
+                                    <div class="current-amount" style="color: #155724; font-weight: bold;">25g</div>
                                 </div>
                             </div>
                         </div>
@@ -4214,6 +4248,45 @@
                 percentDisplay.classList.remove('warning');
                 gramsDisplay.classList.remove('warning');
             }
+            
+            // Validazione per spuntini: verifica che ci siano almeno 2 elementi selezionati
+            if (categoryId === 'morning-snack-yogurt' || categoryId === 'morning-snack') {
+                validateSnackMinimum('snack1', 'morning-snack-yogurt', 'morning-snack', 'Spuntino Mattutino');
+            }
+            if (categoryId === 'afternoon-snack-yogurt' || categoryId === 'afternoon-snack-fruit') {
+                validateSnackMinimum('snack2', 'afternoon-snack-yogurt', 'afternoon-snack-fruit', 'Merenda');
+            }
+        }
+
+        function validateSnackMinimum(sectionId, yogurtCategoryId, fruitCategoryId, snackName) {
+            // Controlla il numero di elementi selezionati tra yogurt e frutta
+            const yogurtItems = document.querySelectorAll(`[data-category="${yogurtCategoryId}"] .select-checkbox:checked`);
+            const fruitItems = document.querySelectorAll(`[data-category="${fruitCategoryId}"] .select-checkbox:checked`);
+            
+            const totalSelected = yogurtItems.length + fruitItems.length;
+            const hasYogurt = yogurtItems.length > 0;
+            
+            // Rimuovi qualsiasi avviso esistente
+            const existingWarnings = document.querySelectorAll(`#${sectionId} .minimum-warning`);
+            existingWarnings.forEach(warning => warning.remove());
+            
+            // Se non ci sono almeno 2 elementi selezionati o se non c'è yogurt, mostra avviso
+            if (totalSelected < 2 || !hasYogurt) {
+                const snackSection = document.getElementById(sectionId);
+                const warningDiv = document.createElement('div');
+                warningDiv.className = 'minimum-warning';
+                warningDiv.style.cssText = 'background: #ffe6e6; border: 1px solid #ff9999; padding: 10px; margin: 10px 0; border-radius: 5px; color: #cc0000; font-weight: bold;';
+                
+                if (!hasYogurt) {
+                    warningDiv.textContent = `⚠️ ATTENZIONE: È obbligatorio selezionare almeno uno yogurt per ${snackName.toLowerCase()}.`;
+                } else if (totalSelected < 2) {
+                    warningDiv.textContent = `⚠️ ATTENZIONE: ${snackName} deve contenere almeno 2 elementi (yogurt + almeno un altro alimento).`;
+                }
+                
+                // Inserisci l'avviso dopo l'intestazione dello spuntino
+                const header = snackSection.querySelector('h2');
+                header.insertAdjacentElement('afterend', warningDiv);
+            }
         }
 
         function resetCategory(categoryId) {
@@ -4251,6 +4324,10 @@
                 const slider = item.querySelector('.food-slider');
                 updateFood(slider);
             });
+            
+            // Validate snacks on page load
+            validateSnackMinimum('snack1', 'morning-snack-yogurt', 'morning-snack', 'Spuntino Mattutino');
+            validateSnackMinimum('snack2', 'afternoon-snack-yogurt', 'afternoon-snack-fruit', 'Merenda');
         });
     </script>
 </body>
